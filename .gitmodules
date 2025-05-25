@@ -1,0 +1,3 @@
+[submodule "baselines/promsec"]
+	path = baselines/promsec
+	url = https://github.com/mahmoudkanazzal/PromSec.git
