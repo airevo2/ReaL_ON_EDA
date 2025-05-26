@@ -13,8 +13,7 @@ We propose **REAL**, a reinforcement learning framework that helps LLMs to produ
 Our framework consists of two components:
 
 1. **Vulnerability Detector**  
-   Uses static program analysis to identify insecure patterns in generated OpenRoad scripts. The detector’s output is used as the quality reward  
-   $r_{quality}$ in the reinforcement learning loop.
+   Uses static program analysis to identify insecure patterns in generated OpenRoad scripts. The detector’s output is used as the quality reward $r_{quality}$ in the reinforcement learning loop.
 
 $$
 r_{\text{quality}}= \mathrm{Detector}(\hat y)=
@@ -23,11 +22,12 @@ r_{\text{quality}}= \mathrm{Detector}(\hat y)=
 0, & \text{otherwise}.
 \end{cases}
 $$
-   
+
+   where $\operatorname{Detector}(\hat{y})$ is a binary reward function that assigns a positive reward only when the generated program $\hat{y}$ passes the vulnerability checks without any detected security or maintainability issues.
+
 
 2. **Program Feedback**  
-   Executes the generated scripts in a real environment to assess their functional correctness. The observed results serve as the functional reward  
-   $r_{function}$ for reinforcement learning.
+   Executes the generated scripts in a real environment to assess their functional correctness. The observed results serve as the functional reward $r_{function}$ for reinforcement learning.
    
 $$
 r_{\text{function}}
@@ -41,6 +41,8 @@ We merged static and dynamic feedback into a single reward signal:
 $$
 r_{hybrid} = \alpha \cdot r_{quality}+ (1 - \alpha) \cdot r_{function}
 $$
+
+---
 ## Code Running Instruction
 ### SETUP
 
@@ -71,3 +73,7 @@ bash experiments/seccodeplt/test_ReaL.sh
 We choose promsec and sven as baseline in this project, you can follow their links to setup and run the baselines
 sven:https://github.com/eth-sri/sven
 promsec:https://github.com/mahmoudkanazzal/PromSec
+
+---
+## Current Result
+Our result 
