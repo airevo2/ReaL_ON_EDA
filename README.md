@@ -15,6 +15,14 @@ Our framework consists of two components:
 1. **Vulnerability Detector**  
    Uses static program analysis to identify insecure patterns in generated OpenRoad scripts. The detector’s output is used as the quality reward  
    $r_{quality}$, where
+
+$$
+r_{\text{quality}}= \mathrm{Detector}(\hat y)=
+\begin{cases}
+1, & \text{if no vulnerabilities are detected},\\
+0, & \text{otherwise}.
+\end{cases}
+$$
    
   
    in the reinforcement learning loop.
