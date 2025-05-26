@@ -27,7 +27,7 @@ Our framework consists of two components:
 We merged static and dynamic feedback into a single reward signal:
 
 $$
-r_{hybrid} = \alpha \cdot r_{quality} \;+\; (1 - \alpha) \cdot r_{function}
+r_{hybrid} = \alpha \cdot r_{quality}+ (1 - \alpha) \cdot r_{function}
 $$
 ## Code Running Instruction
 ### SETUP
