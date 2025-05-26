@@ -7,3 +7,8 @@ The reinforcement learning experiment for LLM on satety is based on verl, so you
 USAGE
 
 TRAINING
+here we introduce an example of RL on qwen2.5-coder-7b
+source run/seccodeplt/rl/7b/ablation2_detector+safety-unittest.sh
+
+EVAL
+an example of eval on our detector on
