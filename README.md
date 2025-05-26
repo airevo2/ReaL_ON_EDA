@@ -77,7 +77,7 @@ promsec:https://github.com/mahmoudkanazzal/PromSec
 
 ---
 ## Current Result
-We use three different-sized LLMs to do experiments. The REAL framework achieves promising results over baselines. 
+We use three different-sized LLMs to do experiments on **qwen2.5-coder**. The REAL framework achieves promising results over baselines. 
 | #Params | Method  | SecCodePLT+ Function | SecCodePLT+ Quality | SecCodePLT+ Func.-Qual. |
 |:-------:|:--------|:---------------------|:--------------------|:------------------------|
 | 0.5B    | SVEN    | 0.1594               | 0.3855              | 0.0548                  |
@@ -93,4 +93,12 @@ We use three different-sized LLMs to do experiments. The REAL framework achieves
 | 7B      | SFT     | **0.8410**           | 0.5058              | 0.4763                  |
 | 7B      | REAL    | 0.7774               | **0.8127**          | **0.6373**              |
 
+### Evaluation. 
+We evaluate REAL along two key dimensions: functionality and quality. For each
+dimension, we report the **Pass Rate** as the metric, representing the percentage of tasks that pass all
+the unit tests or pass the vulnerability detector, respectively. To jointly assess both dimensions, we
+compute the Pass Rate by requiring the generated code to meet both criteria simultaneously.
+
+## Future work
+We will do the evaluation on the OpenRoad scripts dataset (https://huggingface.co/datasets/zjw010/EDA_Dataset). 
 
