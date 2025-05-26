@@ -23,7 +23,7 @@ r_{\text{quality}}= \mathrm{Detector}(\hat y)=
 \end{cases}
 $$
 
-   where $\operatorname{Detector}(\hat{y})$ is a binary reward function that assigns a positive reward only when the generated program $\hat{y}$ passes the vulnerability checks without any detected security or maintainability issues.
+   where $Detector(\hat{y})$ is a binary reward function that assigns a positive reward only when the generated program $\hat{y}$ passes the vulnerability checks without any detected security or maintainability issues.
 
 
 2. **Program Feedback**  
