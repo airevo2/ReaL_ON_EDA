@@ -1,14 +1,22 @@
-<h1 style="text-align: center;">ReaL: Reinforcement Learning for LLM on safety</h1>
+<h1 style="text-align: center;">ReaL: Reinforcement Learning for LLM Safety</h1>
 
-verl is a flexible, efficient and production-ready RL training library for large language models (LLMs).
+**verl** is a flexible, efficient, and production-ready reinforcement learning library for large language models (LLMs).
 
-The reinforcement learning experiment for LLM on satety is based on verl, so you can first follow the https://github.com/volcengine/verl to complete the setup.
+This project uses **verl** to run reinforcement learning experiments focused on LLM safety. Please complete the setup as described in the official repository:  
+https://github.com/volcengine/verl
 
-USAGE
+---
 
-TRAINING
-here we introduce an example of RL on qwen2.5-coder-7b
-source run/seccodeplt/rl/7b/ablation2_detector+safety-unittest.sh
+## Usage
+
+### 1. Training
+
+Below is an example of how to start RL training on **qwen2.5-coder-7b**:
+
+```bash
+bash run/seccodeplt/rl/7b/ablation2_detector+safety-unittest.sh
+
 
 EVAL
-an example of eval on our detector on
+an example of eval on our detector on different datasets
+bash experiments/seccodeplt/test_ReaL.sh
