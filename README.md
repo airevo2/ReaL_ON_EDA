@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">ReaL: Reinforcement Learning for LLM Safety</h1>
+<h1 style="text-align: center;">ReaL: Reinforcement Learning on LLM for CodeGen Quality</h1>
 
 **verl** is a flexible, efficient, and production-ready reinforcement learning library for large language models (LLMs).
 
