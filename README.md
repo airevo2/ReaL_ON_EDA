@@ -80,17 +80,17 @@ promsec:https://github.com/mahmoudkanazzal/PromSec
 We use three different-sized LLMs to do experiment. The REAL framework achieves promising results 
 | #Params | Method  | SecCodePLT+ Function | SecCodePLT+ Quality | SecCodePLT+ Func.-Qual. |
 |:-------:|:--------|:---------------------|:--------------------|:------------------------|
-| 0.5B    | SVEN    | 0.1694               | 0.3855              | 0.0548                  |
-| 0.5B    | PromSec | 0.1377               | 0.3476              | 0.0372                  |
+| 0.5B    | SVEN    | 0.1594               | 0.3855              | 0.0548                  |
+| 0.5B    | PromSec | 0.1277               | 0.3476              | 0.0372                  |
 | 0.5B    | SFT     | **0.8841**           | 0.4964              | **0.4491**              |
 | 0.5B    | REAL    | 0.5889               | **0.7836**          | 0.3966                  |
 | 3B      | SVEN    | 0.3404               | 0.3977              | 0.1655                  |
 | 3B      | PromSec | 0.2090               | 0.4152              | 0.0831                  |
-| 3B      | SFT     | **0.8666**           | 0.5040              | 0.4603                  |
-| 3B      | REAL    | 0.7540               | **0.8370**          | **0.5918**              |
+| 3B      | SFT     | **0.8466**           | 0.5040              | 0.4603                  |
+| 3B      | REAL    | 0.7840               | **0.8270**          | **0.5618**              |
 | 7B      | SVEN    | 0.3190               | 0.4051              | 0.1247                  |
 | 7B      | PromSec | 0.2222               | 0.4772              | 0.1002                  |
 | 7B      | SFT     | **0.8410**           | 0.5058              | 0.4763                  |
-| 7B      | REAL    | 0.7774               | **0.8227**          | **0.6273**              |
+| 7B      | REAL    | 0.7774               | **0.8127**          | **0.6373**              |
 
 
