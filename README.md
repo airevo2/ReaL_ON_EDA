@@ -1,8 +1,7 @@
 <h1 style="text-align: center;">ReaL: Reinforcement Learning on LLM for CodeGen Quality</h1>
 ##Introduction:
-We propose REAL, a reinforcement learning6
-framework that incentivizes LLMs to generate production-quality code using pro-7
-gram analysis-guided feedback. 
+We propose REAL, a reinforcement learning
+framework that incentivizes LLMs to generate production-quality code using program analysis-guided feedback. 
 
 ## SETUP
 
