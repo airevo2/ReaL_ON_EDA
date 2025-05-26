@@ -14,12 +14,12 @@ Our framework consists of two components:
 
 1. **Vulnerability Detector**  
    Uses static program analysis to identify insecure patterns in generated OpenRoad scripts. The detector’s output is used as the quality reward  
-   r_{quality}
+   $r_{quality}$
    in the reinforcement learning loop.
 
 2. **Program Feedback**  
    Executes the generated scripts in a real environment to assess their functional correctness. The observed results serve as the functional reward  
-   r_{function}
+   $r_{function}$
    for reinforcement learning.
 
 ### Hybrid Reward
@@ -29,8 +29,8 @@ We merged static and dynamic feedback into a single reward signal:
 $$
 r_{hybrid} = \alpha \cdot r_{quality} \;+\; (1 - \alpha) \cdot r_{function}
 $$
-
-## SETUP
+## Code Running Instruction
+### SETUP
 
 **verl** is a flexible, efficient, and production-ready reinforcement learning library for large language models (LLMs).
 
@@ -39,16 +39,16 @@ https://github.com/volcengine/verl
 
 ---
 
-## UsageExample
+### UsageExample
 
-### 1. Training
+#### 1. Training
 
 Below is an example of how to start RL training on **qwen2.5-coder-7b**:
 
 ```bash
 bash run/seccodeplt/rl/7b/ablation2_detector+safety-unittest.sh
 ```
-### 2. Evaluation
+#### 2. Evaluation
 
 Run the following script to evaluate our safety detector on various datasets:
 ```bash
