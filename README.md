@@ -1,5 +1,5 @@
 <h1 style="text-align: center;">ReaL: Reinforcement Learning on LLM for CodeGen Quality</h1>
-
+## SETUP
 **verl** is a flexible, efficient, and production-ready reinforcement learning library for large language models (LLMs).
 
 This project uses **verl** to run reinforcement learning experiments focused on LLM safety. Please complete the setup as described in the official repository:  
