@@ -77,7 +77,7 @@ promsec:https://github.com/mahmoudkanazzal/PromSec
 
 ---
 ## Current Result
-We use three different-sized LLMs to do experiment. The REAL framework achieves promising results 
+We use three different-sized LLMs to do experiments. The REAL framework achieves promising results over baselines. 
 | #Params | Method  | SecCodePLT+ Function | SecCodePLT+ Quality | SecCodePLT+ Func.-Qual. |
 |:-------:|:--------|:---------------------|:--------------------|:------------------------|
 | 0.5B    | SVEN    | 0.1594               | 0.3855              | 0.0548                  |
