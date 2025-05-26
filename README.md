@@ -14,7 +14,7 @@ Our framework consists of two components:
 
 1. **Vulnerability Detector**  
    Uses static program analysis to identify insecure patterns in generated OpenRoad scripts. The detector’s output is used as the quality reward  
-   $r_{quality}$, where
+   $r_{quality}$ in the reinforcement learning loop.
 
 $$
 r_{\text{quality}}= \mathrm{Detector}(\hat y)=
@@ -24,14 +24,15 @@ r_{\text{quality}}= \mathrm{Detector}(\hat y)=
 \end{cases}
 $$
    
-  
-   in the reinforcement learning loop.
 
-3. **Program Feedback**  
+2. **Program Feedback**  
    Executes the generated scripts in a real environment to assess their functional correctness. The observed results serve as the functional reward  
-   $r_{function}$, where
+   $r_{function}$for reinforcement learning.
    
-   for reinforcement learning.
+$$
+r_{\text{function}}
+= \frac{1}{N}\sum_{i=1}^N \mathbb{1}\{\,f_{\hat y}(\mathrm{inp}_i)=\mathrm{out}_i\,\}
+$$   
 
 ### Hybrid Reward
 
