@@ -16,7 +16,9 @@ Below is an example of how to start RL training on **qwen2.5-coder-7b**:
 ```bash
 bash run/seccodeplt/rl/7b/ablation2_detector+safety-unittest.sh
 
+###2. Evaluation
 
-EVAL
-an example of eval on our detector on different datasets
+Run the following script to evaluate our safety detector on various datasets:
+```bash
+###an example of eval on our detector on different datasets
 bash experiments/seccodeplt/test_ReaL.sh
