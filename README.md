@@ -27,7 +27,7 @@ $$
 
 2. **Program Feedback**  
    Executes the generated scripts in a real environment to assess their functional correctness. The observed results serve as the functional reward  
-   $r_{function}$for reinforcement learning.
+   $r_{function}$ for reinforcement learning.
    
 $$
 r_{\text{function}}
