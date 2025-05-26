@@ -100,5 +100,5 @@ the unit tests or pass the vulnerability detector, respectively. To jointly asse
 compute the Pass Rate by requiring the generated code to meet both criteria simultaneously.
 
 ## Future work
-We will do the evaluation on the OpenRoad scripts dataset (https://huggingface.co/datasets/zjw010/EDA_Dataset). 
+We verify the robustness of **REAL** framework on the Python Code Safety improvement. For further work. We will do the evaluation on the OpenRoad scripts dataset we collected (https://huggingface.co/datasets/zjw010/EDA_Dataset). 
 
