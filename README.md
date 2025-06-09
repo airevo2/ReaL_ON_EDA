@@ -52,9 +52,14 @@ where $\alpha \in [0,1]$ is a weighting coefficient that controls the trade‐of
 This project uses **verl** to run reinforcement learning experiments focused on LLM safety. Please complete the setup as described in the official repository:  
 https://github.com/volcengine/verl
 
-Minial Requirement: 24GB GPU memory.
-Recommanded GPU: A100 
-For 7b Model, we using 2 piece of A100 to training using ReaL framework
+## Requirements
+
+### Minimum Requirements for ReaL
+
+- **GPU Memory:** ≥ 24 GB  
+- **Recommended GPU:** NVIDIA A100  
+
+For training our 7B model, we used two A100 GPUs with the ReaL framework.
 
 ---
 
@@ -97,22 +102,28 @@ We use three different-sized LLMs to do experiments on **qwen2.5-coder**. The RE
 | 7B      | SFT     | **0.8410**           | 0.5058              | 0.4763                  |
 | 7B      | REAL    | 0.7774               | **0.8127**          | **0.6373**              |
 
+Reference: [SecCodePLT](https://seccodeplt.github.io/)
 
-Open Road
+## OpenROAD Results
+
+We used our best 7B model to generate scripts for 27 distinct EDA tasks. The dataset comes from [EDA_Dataset on Hugging Face](https://huggingface.co/datasets/zjw010/EDA_Dataset) and was processed using [EDA-Corpus](https://github.com/OpenROAD-Assistant/EDA-Corpus).
+
+All generated scripts/prompts/evaluation results are available [here](https://github.com/Colin0vO/ReaL_reproduction).
+
+| #Params | Method | EDAbench+ Function | SecCodePLT+ Quality | SecCodePLT+ Func.-Qual. |
+|:-------:|:------:|:------------------:|:-------------------:|:-----------------------:|
+|   7B    |  REAL  |       0.7777       |       0.8148        |         0.5926          |
+
+These results are similar to our prior experiment on [SecCodePLT](https://seccodeplt.github.io/). 
 
 
-We use our best 7B model to generate scripts for the 27 distinct EDA tasks. 
-Please refer to https://github.com/Colin0vO/ReaL_reproduction.
-| #Params | Method  | SecCodePLT+ Function | SecCodePLT+ Quality | SecCodePLT+ Func.-Qual. |
-|:-------:|:--------|:---------------------|:--------------------|:------------------------|
-| 7B      | REAL    | 0.7777               | 0.8148              | 0.5926                  |
+## Reproduce Instructions
 
-This 
+If you don't have access to a high‑memory GPU, please refer to the easier reproduction page [here](https://github.com/Colin0vO/ReaL_reproduction).
+
+
 ### Evaluation. 
 We evaluate REAL along two key dimensions: functionality and quality. For each
 dimension, we report the **Pass Rate** as the metric, representing the percentage of tasks that pass all
 the unit tests or pass the vulnerability detector, respectively. To jointly assess both dimensions, we
 compute the Pass Rate by requiring the generated code to meet both criteria simultaneously.
-
-## Results
-We verify the robustness of **REAL** framework on the Python Code Safety improvement. We a 27 distinct tasks.
