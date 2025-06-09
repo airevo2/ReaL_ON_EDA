@@ -52,6 +52,10 @@ where $\alpha \in [0,1]$ is a weighting coefficient that controls the trade‐of
 This project uses **verl** to run reinforcement learning experiments focused on LLM safety. Please complete the setup as described in the official repository:  
 https://github.com/volcengine/verl
 
+Minial Requirement: 24GB GPU memory.
+Recommanded GPU: A100 
+For 7b Model, we using 2 piece of A100 to training using ReaL framework
+
 ---
 
 ### Usage Example
@@ -76,7 +80,7 @@ sven:https://github.com/eth-sri/sven
 promsec:https://github.com/mahmoudkanazzal/PromSec
 
 ---
-## Current Result
+## Result
 We use three different-sized LLMs to do experiments on **qwen2.5-coder**. The REAL framework achieves promising results over baselines. 
 | #Params | Method  | SecCodePLT+ Function | SecCodePLT+ Quality | SecCodePLT+ Func.-Qual. |
 |:-------:|:--------|:---------------------|:--------------------|:------------------------|
@@ -93,12 +97,22 @@ We use three different-sized LLMs to do experiments on **qwen2.5-coder**. The RE
 | 7B      | SFT     | **0.8410**           | 0.5058              | 0.4763                  |
 | 7B      | REAL    | 0.7774               | **0.8127**          | **0.6373**              |
 
+
+Open Road
+
+
+We use our best 7B model to generate scripts for the 27 distinct EDA tasks. 
+Please refer to https://github.com/Colin0vO/ReaL_reproduction.
+| #Params | Method  | SecCodePLT+ Function | SecCodePLT+ Quality | SecCodePLT+ Func.-Qual. |
+|:-------:|:--------|:---------------------|:--------------------|:------------------------|
+| 7B      | REAL    | 0.7777               | 0.8148              | 0.5926                  |
+
+This 
 ### Evaluation. 
 We evaluate REAL along two key dimensions: functionality and quality. For each
 dimension, we report the **Pass Rate** as the metric, representing the percentage of tasks that pass all
 the unit tests or pass the vulnerability detector, respectively. To jointly assess both dimensions, we
 compute the Pass Rate by requiring the generated code to meet both criteria simultaneously.
 
-## Future work
-We verify the robustness of **REAL** framework on the Python Code Safety improvement. For further work. We will do the evaluation on the OpenRoad scripts dataset we collected (https://huggingface.co/datasets/zjw010/EDA_Dataset). 
-
+## Results
+We verify the robustness of **REAL** framework on the Python Code Safety improvement. We a 27 distinct tasks.
