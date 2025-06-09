@@ -8,7 +8,6 @@ We have launched a GitHub page for reproductions: [Here](https://github.com/Coli
 
 This GPU‑friendly repository makes it easy to reproduce our ReaL‑on‑EDA results. For detailed steps, visit the reproduction page [here](https://github.com/Colin0vO/ReaL_reproduction).
 
-
 ## Introduction:
 
 We propose **REAL**, a reinforcement learning framework that helps LLMs to produce production-quality OpenRoad scripts by combining static analysis and running feedback. Our project focuses on generating and evaluating OpenRoad code within a Python environment.
