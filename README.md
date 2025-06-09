@@ -1,5 +1,13 @@
 <h1 style="text-align: center;">ReaL: Reinforcement Learning on LLM for CodeGen Quality</h1>
 
+## Announcement
+
+We have launched a GitHub page for reproductions: [Here](https://github.com/Colin0vO/ReaL_reproduction). Refer to this if you do not meet our training GPU requirements.
+
+## Reproduce Instructions
+
+This GPU‑friendly repository makes it easy to reproduce our ReaL‑on‑EDA results. For detailed steps, visit the reproduction page [here](https://github.com/Colin0vO/ReaL_reproduction).
+
 
 ## Introduction:
 
@@ -54,7 +62,7 @@ https://github.com/volcengine/verl
 
 ## Requirements
 
-### Minimum Requirements for ReaL
+### Minimum Requirements for ReaL Training Framework
 
 - **GPU Memory:** ≥ 24 GB  
 - **Recommended GPU:** NVIDIA A100  
@@ -115,11 +123,6 @@ All generated scripts/prompts/evaluation results are available [here](https://gi
 |   7B    |  REAL  |       0.7777       |       0.8148        |         0.5926          |
 
 These results are similar to our prior experiment on [SecCodePLT](https://seccodeplt.github.io/). 
-
-
-## Reproduce Instructions
-
-If you don't have access to a high‑memory GPU, please refer to the easier reproduction page [here](https://github.com/Colin0vO/ReaL_reproduction).
 
 
 ### Evaluation. 
